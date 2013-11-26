@@ -1,15 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'jetty'
-apply plugin: 'application'
+//apply plugin: 'application'
 
-applicationName = "helloWorld"
+//applicationName = "helloWorld"
 
-task wrapper(type: Wrapper) {
-	gradleVersion = '1.6'
-}
+//task wrapper(type: Wrapper) {
+//	gradleVersion = '1.6'
+//}
 
-task stage(dependsOn: [clean, build, jettyRun]) {}
+task stage(dependsOn: [clean, jettyRun]) {}
 
 repositories {
 	mavenLocal()

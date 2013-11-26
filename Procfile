@@ -1,1 +1,1 @@
-web: gradle jettyRun
+web: ./build/install/helloWorld/bin/helloWorld

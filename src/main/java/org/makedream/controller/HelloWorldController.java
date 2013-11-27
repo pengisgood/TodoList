@@ -7,10 +7,10 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public ModelAndView sayHello(ModelAndView modelAndView){
         modelAndView.setViewName("hello");
-        modelAndView.addObject("userName", "Max Peng");
+        modelAndView.addObject("userName", "direct life!");
         return modelAndView;
     }
 }

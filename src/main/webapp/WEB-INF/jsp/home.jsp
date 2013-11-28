@@ -37,13 +37,13 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="share-icon">
-                            <%@include file="qqZoneShare.jsp" %>
+                            <%@include file="share/qqZoneShare.jsp" %>
                         </li>
                         <li class="share-icon">
-                            <%@include file="sinaWeiboShare.jsp" %>
+                            <%@include file="share/sinaWeiboShare.jsp" %>
                         </li>
                         <li class="share-icon">
-                            <%@include file="facebookShare.jsp"%>
+                            <%@include file="share/facebookShare.jsp"%>
                         </li>
                         <li>
                             <form class="navbar-form navbar-left">

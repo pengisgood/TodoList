@@ -1,11 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en">
+<html lang="en" xmlns:wb=“http://open.weibo.com/wb”>
 <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Cool Todo List</title>
 
     <%--for sina weibo sharing--%>
-    <meta property="wb:webmaster" content="f4086bb8c87b1dc8" />
+    <meta property="wb:webmaster" content="f4086bb8c87b1dc8"/>
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body style="background-color: #000">
 <div class="container">
@@ -34,6 +36,9 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        <li class="qqzone-icon">
+                            <%@include file="qqZoneShare.jsp" %>
+                        </li>
                         <li>
                             <form class="navbar-form navbar-left">
                                 <input type="text" class="form-control col-lg-8" placeholder="Search"/>
@@ -41,10 +46,6 @@
                             </form>
                         </li>
                     </ul>
-                </div>
-                <div class="navbar-header">
-                    <%@include file="qqZoneShare.jsp" %>
-                    <%@include file="sinaShare.jsp" %>
                 </div>
             </div>
         </div>

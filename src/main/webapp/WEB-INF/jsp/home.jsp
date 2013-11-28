@@ -13,7 +13,7 @@
         <div class="container">
             <div class="col-lg-12">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/helloWorld">Home</a>
+                    <a class="navbar-brand" href="/">Home</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

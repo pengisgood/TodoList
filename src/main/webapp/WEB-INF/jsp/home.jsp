@@ -47,7 +47,7 @@
     <tag:footer/>
 </div>
 
-<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.js"></script>
 </body>
 </html>

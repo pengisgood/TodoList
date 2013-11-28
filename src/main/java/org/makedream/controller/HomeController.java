@@ -10,6 +10,7 @@ public class HomeController {
     @RequestMapping("/")
     public ModelAndView onView(ModelAndView modelAndView){
         modelAndView.setViewName("home");
+        modelAndView.addObject("userName", "direct life");
         return modelAndView;
     }
 }

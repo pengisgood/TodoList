@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="en"  >
+<%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
+<html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -8,56 +9,8 @@
 </head>
 <body>
 <div class="container">
-    <%--navigation bar--%>
-    <div class="navbar navbar-default navbar-fixed-top" >
-        <div class="container">
-            <div class="col-lg-12">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">Home</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                About Me
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="http://penghongwei.qzone.qq.com/">QQ Zone</a>
-                                </li>
-                                <li>
-                                    <a href="http://weibo.com/u/2574703222">Sina Weibo</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/pengisgood">Facebook</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="share-icon">
-                            <%@include file="share/qqZoneShare.jsp" %>
-                        </li>
-                        <li class="share-icon">
-                            <%@include file="share/sinaWeiboShare.jsp" %>
-                        </li>
-                        <li class="share-icon">
-                            <%@include file="share/facebookShare.jsp"%>
-                        </li>
-                        <li>
-                            <form class="navbar-form navbar-left">
-                                <input type="text" class="form-control col-lg-8" placeholder="Search"/>
-                                <span class=""></span>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <tag:navigation/>
 
-    <%--page content--%>
     <div class="col-lg-12">
         <div class="page-header">
             <div class="row">
@@ -91,38 +44,7 @@
         </div>
     </div>
 
-    <%--footer section--%>
-    <div class="col-lg-12">
-        <footer>
-            <div class="row">
-                <ul class="list-unstyled">
-                    <li class="pull-right">
-                        <a href="#top">Back to top</a>
-                    </li>
-                    <li>
-                        <a href="http://www.cnblogs.com/penghongwei">Blog</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/pengisgood">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/pengisgood">Github</a>
-                    </li>
-                    <li>
-                        <a href="http://weibo.com/u/2574703222">Sina</a>
-                    </li>
-                </ul>
-                <p>
-                    Made by <a href="http://www.cnblogs.com/penghongwei">Max Peng</a>.<br/>
-                    Contact him at <a href="mailto:pengisgood@gmail.com">pengisgood@gmail.com</a>.<br/>
-                    Base on <a href="#">Bootstrap</a>. Icons from <a href="#">Font Awesome</a>.<br/>
-                </p>
-
-                <p>
-                </p>
-            </div>
-        </footer>
-    </div>
+    <tag:footer/>
 </div>
 
 <script type="text/javascript" src="js/jquery-2.0.3.js"></script>

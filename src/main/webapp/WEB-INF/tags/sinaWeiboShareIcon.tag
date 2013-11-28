@@ -1,10 +1,3 @@
-<%--
-  User: hwpeng
-  Date: 11/28/13
-  Time: 6:18 PM
-  Project: helloWorld
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns:wb=“http://open.weibo.com/wb”>
 <head>
     <title></title>

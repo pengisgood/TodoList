@@ -100,20 +100,20 @@
                         <a href="#top">Back to top</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="http://www.cnblogs.com/penghongwei">Blog</a>
                     </li>
                     <li>
-                        <a href="#">Facebook</a>
+                        <a href="https://www.facebook.com/pengisgood">Facebook</a>
                     </li>
                     <li>
-                        <a href="#">Github</a>
+                        <a href="https://github.com/pengisgood">Github</a>
                     </li>
                     <li>
-                        <a href="#">Sina</a>
+                        <a href="http://weibo.com/u/2574703222">Sina</a>
                     </li>
                 </ul>
                 <p>
-                    Made by <a href="#">Max Peng</a>.<br/>
+                    Made by <a href="http://www.cnblogs.com/penghongwei">Max Peng</a>.<br/>
                     Contact him at <a href="mailto:pengisgood@gmail.com">pengisgood@gmail.com</a>.<br/>
                     Base on <a href="#">Bootstrap</a>. Icons from <a href="#">Font Awesome</a>.<br/>
                 </p>

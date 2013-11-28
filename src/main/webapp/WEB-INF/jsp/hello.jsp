@@ -39,6 +39,9 @@
                         <li class="qqzone-icon">
                             <%@include file="qqZoneShare.jsp" %>
                         </li>
+                        <li class="qqzone-icon">
+                            <%@include file="sinaShare.jsp" %>
+                        </li>
                         <li>
                             <form class="navbar-form navbar-left">
                                 <input type="text" class="form-control col-lg-8" placeholder="Search"/>

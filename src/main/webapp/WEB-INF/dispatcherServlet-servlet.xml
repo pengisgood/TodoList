@@ -14,7 +14,10 @@
     <mvc:annotation-driven />
 
     <mvc:resources mapping="css/**" location="/WEB-INF/css/"/>
-    <mvc:resources mapping="js/**" location="/WEB-INF/js/libs"/>
+    <mvc:resources mapping="js/controller/**" location="/WEB-INF/js/controller/"/>
+    <mvc:resources mapping="js/service/**" location="/WEB-INF/js/service/"/>
+    <mvc:resources mapping="js/directive/**" location="/WEB-INF/js/directive/"/>
+    <mvc:resources mapping="js/libs/**" location="/WEB-INF/js/libs/"/>
     <mvc:resources mapping="img/**" location="/WEB-INF/img/"/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

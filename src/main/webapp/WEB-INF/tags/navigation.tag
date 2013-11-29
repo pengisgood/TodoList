@@ -1,5 +1,10 @@
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
 
+<html lang="en">
+<title></title>
+<head></head>
+<body>
+
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="col-lg-12">
@@ -29,16 +34,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="share-icon">
                         <tag:qqZoneShareIcon/>
-                        <%--<%@include file="../share/qqZoneShare.jsp" %>--%>
                     </li>
                     <li class="share-icon">
                         <tag:sinaWeiboShareIcon/>
-                        <%--<%@include file="../share/sinaWeiboShare.jsp" %>--%>
                     </li>
                     <li class="share-icon">
                         <tag:facebookShareIcon/>
-
-                        <%--<%@include file="../share/facebookShare.jsp" %>--%>
                     </li>
                     <li>
                         <form class="navbar-form navbar-left">
@@ -51,3 +52,5 @@
         </div>
     </div>
 </div>
+</body>
+</html>

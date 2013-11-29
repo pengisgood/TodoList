@@ -7,8 +7,9 @@
     <title>Cool Todo List</title>
 
 </head>
-<body>
+<body ng-app="myApp">
 <div class="container">
+
     <tag:navigation/>
 
     <div class="col-lg-12">
@@ -23,31 +24,13 @@
         </div>
     </div>
 
-    <div class="col-lg-12">
-        <h1>Here is the content: ${userName}</h1>
-
-        <div class="col-lg-12">
-            <div class="btn btn-primary">
-                hehe
-            </div>
-            <div class="btn btn-info">
-                haha
-            </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="span6 btn btn-warning btn-large">
-                Fluid 6
-            </div>
-            <div class="span6 btn btn-danger btn-large">
-                Fluid 6
-            </div>
-        </div>
-    </div>
+    <%@include file="todoList.jsp" %>
 
     <tag:footer/>
 </div>
 
 <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="js/libs/bootstrap.js"></script>
+<script type="text/javascript" src="js/libs/angular.js"></script>
 </body>
 </html>

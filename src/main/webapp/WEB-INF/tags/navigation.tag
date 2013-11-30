@@ -33,13 +33,13 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="share-icon">
-                        <tag:qqZoneShareIcon/>
+                        <%--<tag:qqZoneShareIcon/>--%>
                     </li>
                     <li class="share-icon">
-                        <tag:sinaWeiboShareIcon/>
+                        <%--<tag:sinaWeiboShareIcon/>--%>
                     </li>
                     <li class="share-icon">
-                        <tag:facebookShareIcon/>
+                        <%--<tag:facebookShareIcon/>--%>
                     </li>
                     <li>
                         <form class="navbar-form navbar-left">

@@ -21,10 +21,7 @@
             <p>
                 Made by <a href="http://www.cnblogs.com/penghongwei">Max Peng</a>.<br/>
                 Contact him at <a href="mailto:pengisgood@gmail.com">pengisgood@gmail.com</a>.<br/>
-                Base on <a href="#">Bootstrap</a>. Icons from <a href="#">Font Awesome</a>.<br/>
-            </p>
-
-            <p>
+                Base on <a href="http://getbootstrap.com/">Bootstrap</a>. Icons from <a href="http://fontawesome.io/">Font Awesome</a>.<br/>
             </p>
         </div>
     </footer>

@@ -1,6 +1,5 @@
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 <script type="text/javascript" src="js/controller/TodoListCtrl.js"></script>
-<div class="col-lg-12" ng-app="myApp" ng-controller="TodoListCtrl">
+<div class="col-lg-12" ng-controller="TodoListCtrl">
     <div class="row">
         <div class="col-lg-6">
             <h1>Todo:</h1>
@@ -16,7 +15,7 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="item in todos | filter: 'false'">
-                        <td>{{$index}}</td>
+                        <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
                         <td>2013-11-29 00:36:44</td>
                         <td>
@@ -44,7 +43,7 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="item in todos | filter: 'true'">
-                        <td>{{$index}}</td>
+                        <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
                         <td>2013-11-29 00:36:44</td>
                         <td>

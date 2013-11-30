@@ -1,13 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/libs/angular.js"></script>
+<script type="text/javascript" src="js/controller/StyleTemplateCtrl.js"></script>
+<html ng-app="myApp" ng-controller="StyleTemplateCtrl" lang="en">
+<head >
+    <link ng-init="styleTemplate='amelia'" rel="stylesheet" type="text/css"
+          ng-href="css/bootstrap-{{styleTemplate}}.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Cool Todo List</title>
-
 </head>
-<body ng-app="myApp">
+<body>
 <div class="container">
 
     <tag:navigation/>
@@ -20,6 +24,28 @@
 
                     <p class="lead">It's totally free!</p>
                 </div>
+                <div class="col-lg-6">
+                    <div class="alert alert-dismissable alert-info">
+                        <button type="button" class="close" data-dismiss="alert">X</button>
+                        <h4>You can choose different style from here!</h4>
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#amelia" data-toggle="tab" ng-click="changeStyle('amelia')">Amelia</a>
+                            </li>
+                            <li>
+                                <a href="#cyborg" data-toggle="tab" ng-click="changeStyle('cyborg')">Cyborg</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="amelia">
+                                <p style="font-family:Lobster; text-transform: capitalize">{{styleTemplate}}</p>
+                            </div>
+                            <div class="tab-pane fade" id="cyborg">
+                                <p style="font-family:'Droid Sans'; text-transform: capitalize">{{styleTemplate}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,8 +55,5 @@
     <tag:footer/>
 </div>
 
-<script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
-<script type="text/javascript" src="js/libs/bootstrap.js"></script>
-<script type="text/javascript" src="js/libs/angular.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
                     <a href="https://www.facebook.com/pengisgood">Facebook</a>
                 </li>
                 <li>
-                    <a href="https://github.com/pengisgood">Github</a>
+                    <a href="https://github.com/pengisgood/TodoList">Github</a>
                 </li>
                 <li>
                     <a href="http://weibo.com/u/2574703222">Sina</a>

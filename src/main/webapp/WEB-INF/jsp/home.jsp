@@ -35,13 +35,25 @@
                             <li>
                                 <a href="#cyborg" data-toggle="tab" ng-click="changeStyle('cyborg')">Cyborg</a>
                             </li>
+                            <li>
+                                <a href="#simplex" data-toggle="tab" ng-click="changeStyle('simplex')">Simplex</a>
+                            </li>
+                            <li>
+                                <a href="#slate" data-toggle="tab" ng-click="changeStyle('slate')">Slate</a>
+                            </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane fade in active" id="amelia">
+                            <div class="tab-pane in active" id="amelia">
                                 <p style="font-family:Lobster; text-transform: capitalize">{{styleTemplate}}</p>
                             </div>
                             <div class="tab-pane fade" id="cyborg">
                                 <p style="font-family:'Droid Sans'; text-transform: capitalize">{{styleTemplate}}</p>
+                            </div>
+                            <div class="tab-pane fade" id="simplex">
+                                <p style="font-family:'Josefin Sans'; text-transform: capitalize">{{styleTemplate}}</p>
+                            </div>
+                            <div class="tab-pane fade" id="slate">
+                                <p style="font-family:''; text-transform: capitalize">{{styleTemplate}}</p>
                             </div>
                         </div>
                     </div>

@@ -19,9 +19,9 @@
                         <td>{{item.text}}</td>
                         <td>2013-11-29 00:36:44</td>
                         <td>
-                            <div class="btn btn-sm btn-info">Add</div>
-                            <div class="btn btn-sm btn-primary">Edit</div>
-                            <div class="btn btn-sm btn-danger">Delete</div>
+                            <div class="btn btn-sm btn-info" ng-click="">Add</div>
+                            <div class="btn btn-sm btn-primary" ng-click="">Edit</div>
+                            <div class="btn btn-sm btn-danger" ng-click="delete(item)">Delete</div>
                         </td>
                     </tr>
                     </tbody>
@@ -48,7 +48,7 @@
                         <td>2013-11-29 00:36:44</td>
                         <td>
                             <div class="btn btn-sm btn-primary">Edit</div>
-                            <div class="btn btn-sm btn-danger">Delete</div>
+                            <div class="btn btn-sm btn-danger" ng-click="delete(item)">Delete</div>
                         </td>
                     </tr>
                     </tbody>

@@ -11,9 +11,8 @@ myApp.factory("Todos", function () {
     ];
 });
 
-function TodoListCtrl($scope, Todos){
+function TodoListCtrl($scope, Todos) {
     $scope.todos = Todos;
-    console.log($scope.todos)
     $scope.newTodo = "";
 
 
@@ -24,10 +23,15 @@ function TodoListCtrl($scope, Todos){
         $scope.newTodo = "";
     };
 
-    $scope.update = function (item) {
+    $scope.edit = function (item) {
         var index = $scope.todos.indexOf(item);
         var updatedItem = $scope.todos.splice(index, 1);
         updatedItem[0].done = !updatedItem[0].done;
         $scope.todos.push(updatedItem[0]);
+    }
+
+    $scope.delete = function (item) {
+        var index = $scope.todos.indexOf(item);
+        $scope.todos.splice(index, 1);
     }
 };

@@ -29,7 +29,7 @@
                         <button type="button" class="close" data-dismiss="alert">X</button>
                         <h4>You can choose different style from here!</h4>
                         <ul class="nav nav-tabs">
-                            <li class="active">
+                            <li >
                                 <a href="#amelia" data-toggle="tab" ng-click="changeStyle('amelia')">Amelia</a>
                             </li>
                             <li>
@@ -38,12 +38,12 @@
                             <li>
                                 <a href="#simplex" data-toggle="tab" ng-click="changeStyle('simplex')">Simplex</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="#slate" data-toggle="tab" ng-click="changeStyle('slate')">Slate</a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane in active" id="amelia">
+                            <div class="tab-pane fade" id="amelia">
                                 <p style="font-family:Lobster; text-transform: capitalize">{{styleTemplate}}</p>
                             </div>
                             <div class="tab-pane fade" id="cyborg">
@@ -52,7 +52,7 @@
                             <div class="tab-pane fade" id="simplex">
                                 <p style="font-family:'Josefin Sans'; text-transform: capitalize">{{styleTemplate}}</p>
                             </div>
-                            <div class="tab-pane fade" id="slate">
+                            <div class="tab-pane in active" id="slate">
                                 <p style="font-family:''; text-transform: capitalize">{{styleTemplate}}</p>
                             </div>
                         </div>

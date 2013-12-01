@@ -1,18 +1,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
+
 <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/libs/angular.js"></script>
 <script type="text/javascript" src="js/controller/StyleTemplateCtrl.js"></script>
+
 <html ng-app="myApp" ng-controller="StyleTemplateCtrl" lang="en">
 <head >
-    <link ng-init="styleTemplate='amelia'" rel="stylesheet" type="text/css"
-          ng-href="css/bootstrap-{{styleTemplate}}.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Cool Todo List</title>
 </head>
 <body>
 <div class="container">
+    <link rel="stylesheet" type="text/css" ng-href="css/bootstrap-{{styleTemplate}}.css"/>
 
     <tag:navigation/>
 
@@ -21,7 +22,6 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h1>Organize any thing, together</h1>
-
                     <p class="lead">It's totally free!</p>
                 </div>
                 <div class="col-lg-6">

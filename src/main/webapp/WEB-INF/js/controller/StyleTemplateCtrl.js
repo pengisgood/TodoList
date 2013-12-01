@@ -1,5 +1,5 @@
 function StyleTemplateCtrl($scope) {
-    $scope.styleTemplate = "cyborg";
+    $scope.styleTemplate = "slate";
 
     $scope.changeStyle = function(style) {
         $scope.styleTemplate = style;

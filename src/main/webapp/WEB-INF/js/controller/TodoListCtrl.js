@@ -11,7 +11,7 @@ myApp.factory("Todos", function () {
     ];
 });
 
-function TodoListCtrl($scope, $filter, Todos) {
+function TodoListCtrl($scope, Todos) {
     $scope.todos = Todos;
     $scope.originItem = {};
     $scope.updatedItem = {};

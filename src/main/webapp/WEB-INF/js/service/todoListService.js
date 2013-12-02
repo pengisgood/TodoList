@@ -1,6 +1,6 @@
 var myApp = angular.module("myApp", []);
 
-myApp.service('itemService', [function () {
+myApp.service('todoListService', [function () {
     this.initFakeData = function () {
         return [
             {text: 'study angular js', done: false, lastUpdated: Date.now()},

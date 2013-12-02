@@ -31,6 +31,7 @@
                         <td></td>
                         <td>
                             <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#itemDetailsModal" ng-click="add()">Add</div>
+                            <div class="btn btn-large btn-success" data-toggle="modal" data-target="#" ng-click="">Save</div>
                         </td>
                     </tr>
                     </tbody>

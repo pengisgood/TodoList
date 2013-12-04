@@ -1,4 +1,10 @@
-var myApp = angular.module("myApp", []);
+var myApp = angular.module("myApp", ['mongolabResourceHttp']);
+
+myApp.constant('MONGOLAB_CONFIG', {API_KEY:'7lOuCyzkW57WlJLk9Zsu0VFCNpDi_1-J', DB_NAME:'todolistdb'});
+
+myApp.factory('Project', function($mongolabResourceHttp) {
+    return $mongolabResourceHttp('projects');
+});
 
 myApp.factory("Todos", function () {
     return [
@@ -11,11 +17,14 @@ myApp.factory("Todos", function () {
     ];
 });
 
-function TodoListCtrl($scope, Todos) {
+function TodoListCtrl($scope, projects, Todos) {
+    $scope.project = projects;
+    $scope.email = "";
+    $scope.confirmedEmail = "";
+
     $scope.todos = Todos;
     $scope.originItem = {};
     $scope.updatedItem = {};
-
 
     $scope.add = function () {
         $scope.originItem = {};
@@ -50,6 +59,10 @@ function TodoListCtrl($scope, Todos) {
         $scope.todos[index].text = item.text;
         $scope.todos[index].done = item.done;
         $scope.todos[index].lastUpdated = Date.now();
+    }
+
+    $scope.save = function() {
+        $scope.project.$save(success, error);
     }
 
     $scope.delete = function (item) {

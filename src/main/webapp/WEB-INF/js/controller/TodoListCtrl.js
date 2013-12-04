@@ -1,10 +1,4 @@
-var myApp = angular.module("myApp", ['mongolabResourceHttp']);
-
-myApp.constant('MONGOLAB_CONFIG', {API_KEY:'7lOuCyzkW57WlJLk9Zsu0VFCNpDi_1-J', DB_NAME:'todolistdb'});
-
-myApp.factory('Project', function($mongolabResourceHttp) {
-    return $mongolabResourceHttp('projects');
-});
+var myApp = angular.module("myApp");
 
 myApp.factory("Todos", function () {
     return [
@@ -17,8 +11,8 @@ myApp.factory("Todos", function () {
     ];
 });
 
-function TodoListCtrl($scope, projects, Todos) {
-    $scope.project = projects;
+myApp.controller('TodoListCtrl', function($scope, mongolabService, Todos) {
+    $scope.mongolabService = mongolabService;
     $scope.email = "";
     $scope.confirmedEmail = "";
 
@@ -61,16 +55,22 @@ function TodoListCtrl($scope, projects, Todos) {
         $scope.todos[index].lastUpdated = Date.now();
     }
 
-    $scope.save = function() {
-        $scope.project.$save(success, error);
-    }
-
     $scope.delete = function (item) {
         var index = $scope.todos.indexOf(item);
         $scope.todos.splice(index, 1);
     }
 
-    $scope.formatDate = function (date, format) {
-        return $filter('date')(date, format);
+    var success = function(){
+        console.log("save data succeed");
+
     }
-};
+
+    var error = function(){
+        console.log("save data failed");
+    }
+
+    $scope.save = function() {
+        $scope.mongolabService.$save(success, error);
+    }
+});
+

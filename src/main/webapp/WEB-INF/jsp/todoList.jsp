@@ -1,4 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<script type="text/javascript" src="js/libs/mongolabResourceHttp.js"></script>
+<script type="text/javascript" src="js/service/mongolabService.js"></script>
+
 <script type="text/javascript" src="js/controller/TodoListCtrl.js"></script>
 <div class="col-lg-12" ng-controller="TodoListCtrl">
     <div class="row">
@@ -16,7 +19,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="item in todos | filter: 'false'">
+                    <tr ng-cloak ng-repeat="item in todos | filter: 'false'">
                         <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
                         <td>{{item.lastUpdated | date:"medium"}}</td>
@@ -52,7 +55,7 @@
                         <th>Operations</th>
                     </tr>
                     </thead>
-                    <tbody>
+                    <tbody ng-cloak>
                     <tr ng-repeat="item in todos | filter: 'true'">
                         <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
@@ -67,7 +70,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog">
+        <div ng-cloak class="modal fade" id="itemDetailsModal" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

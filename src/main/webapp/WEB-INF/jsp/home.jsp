@@ -9,11 +9,11 @@
 <html ng-app="myApp" ng-controller="StyleTemplateCtrl" lang="en">
 <head >
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" ng-cloak ng-href="css/bootstrap-{{styleTemplate}}.css"/>
     <title>Cool Todo List</title>
 </head>
 <body>
 <div class="container">
-    <link rel="stylesheet" type="text/css" ng-href="css/bootstrap-{{styleTemplate}}.css"/>
 
     <tag:navigation/>
 
@@ -25,7 +25,7 @@
                     <p class="lead">It's totally free!</p>
                 </div>
                 <div class="col-lg-6">
-                    <div class="alert alert-dismissable alert-info">
+                    <div ng-cloak class="alert alert-dismissable alert-info">
                         <button type="button" class="close" data-dismiss="alert">X</button>
                         <h4>You can choose different style from here!</h4>
                         <ul class="nav nav-tabs">

@@ -33,8 +33,7 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#itemDetailsModal">Add</div>
-                            <div class="btn btn-large btn-success" data-toggle="modal" data-target="#emailModal">Save</div>
+                            <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#itemDetailsModal" ng-click="add()">Add</div>
                         </td>
                     </tr>
                     </tbody>
@@ -79,7 +78,7 @@
                     </div>
                     <div class="modal-body">
                         <label class="control-label" for="title">Title</label>
-                        <input class="form-control" ng-model="currentItem.text" type="text" id="title"/>
+                        <input class="form-control" ng-model="currentItem.text" type="text" id="title" placeholder="enter your text here..."/>
                         <br>
                         <label class="control-label" for="status">Done</label>
                         <input class="form-control" type="text" id="status" ng-model="currentItem.done">
@@ -88,35 +87,30 @@
                         <input class="form-control" disabled type="text" id="lastUpdate" ng-model="currentItem.lastUpdated">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(currentItem)">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(currentItem)">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <%--<div ng-cloak class="modal fade" id="emailModal" tabindex="-1" role="dialog">--%>
-        <%--<div class="modal-dialog">--%>
-            <%--<div class="modal-content">--%>
-                <%--<div class="modal-header">--%>
-                    <%--<button type="button" class="close" data-dismiss="modal">&times;</button>--%>
-                    <%--<h4 class="modal-title">Email Confirmation</h4>--%>
-                <%--</div>--%>
-                <%--<form name="">--%>
-
-                    <%--<div class="modal-body">--%>
-                        <%--<label class="control-label" for="email">Email</label>--%>
-                        <%--<input class="form-control" ng-model="data.email" type="email" id="email" required/>--%>
-                        <%--<br>--%>
-                        <%--<label class="control-label" for="confirmEmail">Confirm Email</label>--%>
-                        <%--<input class="form-control" type="email" id="confirmEmail" ng-model="data.confirmedEmail" required>--%>
-                    <%--</div>--%>
-                    <%--<div class="modal-footer">--%>
-                        <%--<button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(updatedItem)">Save</button>--%>
-                    <%--</div>--%>
-                <%--</form>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
+    <div ng-cloak class="modal fade" id="submit" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Email Confirmation</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Please remember this email address. We have no access to get it back if you forget it! Good luck!</p>
+                    <label class="control-label" for="email">Email Address</label>
+                    <input class="form-control" ng-model="data.email" type="email" id="email" required/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="save()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </div>

@@ -1,10 +1,4 @@
 <%@ taglib prefix="tag" tagdir="/WEB-INF/tags" %>
-
-<html lang="en">
-<title></title>
-<head></head>
-<body>
-
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="col-lg-12">
@@ -13,6 +7,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#submit" data-toggle="modal" data-target="#submit">Save</a>
+                    </li>
+                    <li>
+                        <a href="#submit" data-toggle="modal" data-target="#submit">Retrieve</a>
+                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             About Me
@@ -52,5 +52,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

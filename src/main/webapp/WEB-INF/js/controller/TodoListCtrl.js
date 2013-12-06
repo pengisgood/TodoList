@@ -62,8 +62,13 @@ myApp.controller('TodoListCtrl', function($scope, mongolabService, Todos) {
     };
 
     $scope.save = function() {
-//        console.log($scope.data)
+        console.log("saving");
         //$scope.data.$save(success, error);
-    }
+    };
+
+    $scope.retrieve = function() {
+        console.log("retrieving");
+//        $scope.data.$getById($scope.data.email);
+    };
 });
 

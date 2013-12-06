@@ -12,65 +12,58 @@ myApp.factory("Todos", function () {
 });
 
 myApp.controller('TodoListCtrl', function($scope, mongolabService, Todos) {
-    $scope.mongolabService = mongolabService;
-    $scope.email = "";
-    $scope.confirmedEmail = "";
+    $scope.data = new mongolabService();
 
-    $scope.todos = Todos;
+    $scope.data.email = "pengisgood@gmail.com";
+    $scope.data.confirmedEmail = "pengisgood@gmail.com";
+    $scope.data.todos = Todos;
+
+    $scope.currentItem = {};
     $scope.originItem = {};
-    $scope.updatedItem = {};
 
     $scope.add = function () {
         $scope.originItem = {};
-        $scope.updatedItem = {text:"", done:false, lastUpdated: Date.now()};
+        $scope.currentItem = {done:false, lastUpdated: Date.now()};
     };
 
     $scope.edit = function (item) {
+        $scope.currentItem = angular.copy(item);
         $scope.originItem = item;
-
-        $scope.updatedItem.text = item.text;
-        $scope.updatedItem.done = item.done;
-        $scope.updatedItem.lastUpdated = item.lastUpdated;
-    }
+    };
 
     $scope.update = function (item) {
         if (angular.equals(item, $scope.originItem)) {
             return;
         }
-        var index = $scope.todos.indexOf($scope.originItem);
+        var index = $scope.data.todos.indexOf($scope.originItem);
 
         //add
         if(index === -1) {
-            var newItem = {};
-            newItem.text = item.text;
-            newItem.done = item.done;
-            newItem.lastUpdated = item.lastUpdated;
-            $scope.todos.push(newItem);
+            $scope.data.todos.push(item);
             return;
         }
 
         //edit
-        $scope.todos[index].text = item.text;
-        $scope.todos[index].done = item.done;
-        $scope.todos[index].lastUpdated = Date.now();
-    }
+        item.lastUpdated = Date.now();
+        $scope.data.todos[index] = item;
+    };
 
     $scope.delete = function (item) {
-        var index = $scope.todos.indexOf(item);
-        $scope.todos.splice(index, 1);
-    }
+        var index = $scope.data.todos.indexOf(item);
+        $scope.data.todos.splice(index, 1);
+    };
 
     var success = function(){
         console.log("save data succeed");
-
-    }
+    };
 
     var error = function(){
         console.log("save data failed");
-    }
+    };
 
     $scope.save = function() {
-        $scope.mongolabService.$save(success, error);
+//        console.log($scope.data)
+        //$scope.data.$save(success, error);
     }
 });
 

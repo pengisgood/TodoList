@@ -19,10 +19,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-cloak ng-repeat="item in todos | filter: 'false'">
+                    <tr ng-cloak ng-repeat="item in data.todos | filter: 'false'">
                         <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
-                        <td>{{item.lastUpdated | date:"medium"}}</td>
+                        <td>{{item.lastUpdated | date: "medium"}}</td>
                         <td>
                             <div class="btn btn-sm btn-primary" data-toggle="modal" data-target="#itemDetailsModal" ng-click="edit(item)">Edit</div>
                             <div class="btn btn-sm btn-danger" ng-click="delete(item)">Delete</div>
@@ -33,8 +33,8 @@
                         <td></td>
                         <td></td>
                         <td>
-                            <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#itemDetailsModal" ng-click="add()">Add</div>
-                            <div class="btn btn-large btn-success" data-toggle="modal" data-target="#" ng-click="">Save</div>
+                            <div class="btn btn-sm btn-info" data-toggle="modal" data-target="#itemDetailsModal">Add</div>
+                            <div class="btn btn-large btn-success" data-toggle="modal" data-target="#emailModal">Save</div>
                         </td>
                     </tr>
                     </tbody>
@@ -56,7 +56,7 @@
                     </tr>
                     </thead>
                     <tbody ng-cloak>
-                    <tr ng-repeat="item in todos | filter: 'true'">
+                    <tr ng-repeat="item in data.todos | filter: 'true'">
                         <td>{{$index+1}}</td>
                         <td>{{item.text}}</td>
                         <td>{{item.lastUpdated | date: "medium"}}</td>
@@ -79,20 +79,44 @@
                     </div>
                     <div class="modal-body">
                         <label class="control-label" for="title">Title</label>
-                        <input class="form-control" ng-model="updatedItem.text" type="text" id="title"/>
+                        <input class="form-control" ng-model="currentItem.text" type="text" id="title"/>
                         <br>
                         <label class="control-label" for="status">Done</label>
-                        <input class="form-control" type="text" id="status" ng-model="updatedItem.done">
+                        <input class="form-control" type="text" id="status" ng-model="currentItem.done">
                         <br>
                         <label class="control-label" for="lastUpdate">Last update</label>
-                        <input class="form-control" disabled type="text" id="lastUpdate" ng-value="formatDate(updatedItem.lastUpdated,'medium')">
+                        <input class="form-control" disabled type="text" id="lastUpdate" ng-model="currentItem.lastUpdated">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="update(originItem)">Close</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(updatedItem)">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(currentItem)">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <%--<div ng-cloak class="modal fade" id="emailModal" tabindex="-1" role="dialog">--%>
+        <%--<div class="modal-dialog">--%>
+            <%--<div class="modal-content">--%>
+                <%--<div class="modal-header">--%>
+                    <%--<button type="button" class="close" data-dismiss="modal">&times;</button>--%>
+                    <%--<h4 class="modal-title">Email Confirmation</h4>--%>
+                <%--</div>--%>
+                <%--<form name="">--%>
+
+                    <%--<div class="modal-body">--%>
+                        <%--<label class="control-label" for="email">Email</label>--%>
+                        <%--<input class="form-control" ng-model="data.email" type="email" id="email" required/>--%>
+                        <%--<br>--%>
+                        <%--<label class="control-label" for="confirmEmail">Confirm Email</label>--%>
+                        <%--<input class="form-control" type="email" id="confirmEmail" ng-model="data.confirmedEmail" required>--%>
+                    <%--</div>--%>
+                    <%--<div class="modal-footer">--%>
+                        <%--<button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="update(updatedItem)">Save</button>--%>
+                    <%--</div>--%>
+                <%--</form>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+
 </div>

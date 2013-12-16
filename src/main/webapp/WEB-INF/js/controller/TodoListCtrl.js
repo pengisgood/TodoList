@@ -51,12 +51,12 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService'
     };
 
     $scope.save = function() {
-        console.log("saving");
+        console.log("saving...");
         //$scope.data.$save(success, error);
     };
 
     $scope.retrieve = function() {
-        console.log("retrieving");
+        console.log("retrieving...");
 //        $scope.data.$getById($scope.data.email);
     };
 }]);

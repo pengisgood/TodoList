@@ -1,5 +1,4 @@
-var myApp = angular.module("myApp", ['mongolabResourceHttp']);
-
+var myApp = angular.module('myApp.mongolabService', ['mongolabResourceHttp']);
 
 myApp.constant('MONGOLAB_CONFIG', {API_KEY:'7lOuCyzkW57WlJLk9Zsu0VFCNpDi_1-J', DB_NAME:'todolistdb'});
 

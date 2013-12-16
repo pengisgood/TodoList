@@ -1,8 +1,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <script type="text/javascript" src="js/libs/mongolabResourceHttp.js"></script>
 <script type="text/javascript" src="js/service/mongolabService.js"></script>
-
+<script type="text/javascript" src="js/service/todoListService.js"></script>
 <script type="text/javascript" src="js/controller/TodoListCtrl.js"></script>
+
 <div class="col-lg-12" ng-controller="TodoListCtrl">
     <div class="row">
         <div class="col-lg-6">

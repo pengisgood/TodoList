@@ -1,22 +1,11 @@
-var myApp = angular.module("myApp");
+var myApp = angular.module('myApp', ['myApp.services', 'myApp.mongolabService']);
 
-myApp.factory("Todos", function () {
-    return [
-        {text: 'study angular js', done: false, lastUpdated: Date.now()},
-        {text: 'practice refactor', done: false, lastUpdated: Date.now()},
-        {text: 'study java', done: true, lastUpdated: Date.now()},
-        {text: 'practice English', done: false, lastUpdated: Date.now()},
-        {text: 'play ping pong', done: true, lastUpdated: Date.now()},
-        {text: 'practice typing', done: false, lastUpdated: Date.now()}
-    ];
-});
-
-myApp.controller('TodoListCtrl', function($scope, mongolabService, Todos) {
+myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService', function($scope, todoListService, mongolabService) {
     $scope.data = new mongolabService();
 
     $scope.data.email = "pengisgood@gmail.com";
     $scope.data.confirmedEmail = "pengisgood@gmail.com";
-    $scope.data.todos = Todos;
+    $scope.data.todos = todoListService.fakeData;
 
     $scope.currentItem = {};
     $scope.originItem = {};
@@ -70,5 +59,5 @@ myApp.controller('TodoListCtrl', function($scope, mongolabService, Todos) {
         console.log("retrieving");
 //        $scope.data.$getById($scope.data.email);
     };
-});
+}]);
 

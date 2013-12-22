@@ -4,7 +4,7 @@
 <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/libs/angular.js"></script>
-<script type="text/javascript" src="js/controller/StyleTemplateCtrl.js"></script>
+<script type="text/javascript" src="js/controller/styleTemplateCtrl.js"></script>
 
 <html ng-app="myApp" ng-controller="StyleTemplateCtrl" lang="en">
 <head >

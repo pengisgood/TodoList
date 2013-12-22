@@ -61,7 +61,12 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService'
 
     $scope.retrieve = function() {
         console.log("retrieving...");
-        todoListService.find($scope.data.email, success);
+        todoListService.find($scope.data.email, updateTodos);
     };
+
+    var updateTodos =function (value) {
+        $scope.data.todos = value;
+    };
+
 }]);
 

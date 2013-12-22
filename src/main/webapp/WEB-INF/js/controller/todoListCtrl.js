@@ -3,12 +3,16 @@ var myApp = angular.module('myApp', ['myApp.services', 'myApp.mongolabService'])
 myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService', function($scope, todoListService, mongolabService) {
     $scope.data = new mongolabService();
 
-    $scope.data.email = "pengisgood@gmail.com";
-    $scope.data.confirmedEmail = "pengisgood@gmail.com";
-    $scope.data.todos = todoListService.fakeData;
+    $scope.data.email = "";
+    $scope.data.confirmedEmail = "";
+    $scope.data.todos = {};
 
     $scope.currentItem = {};
     $scope.originItem = {};
+
+    $scope.init = function() {
+        $scope.data.todos = todoListService.getFakeData();
+    };
 
     $scope.add = function () {
         $scope.originItem = {};
@@ -52,12 +56,12 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService'
 
     $scope.save = function() {
         console.log("saving...");
-        //$scope.data.$save(success, error);
+        todoListService.save($scope.data, success);
     };
 
     $scope.retrieve = function() {
         console.log("retrieving...");
-//        $scope.data.$getById($scope.data.email);
+        todoListService.find($scope.data.email, success);
     };
 }]);
 

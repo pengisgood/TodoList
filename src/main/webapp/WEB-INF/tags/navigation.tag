@@ -8,10 +8,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#submit" data-toggle="modal" data-target="#submit">Save</a>
-                    </li>
-                    <li>
-                        <a href="#submit" data-toggle="modal" data-target="#submit">Retrieve</a>
+                        <a href="#saveAndRetrieve" data-toggle="modal" data-target="#saveAndRetrieve">Save & Retrieve</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">

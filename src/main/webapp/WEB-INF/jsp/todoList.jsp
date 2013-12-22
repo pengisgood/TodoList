@@ -4,7 +4,7 @@
 <script type="text/javascript" src="js/service/todoListService.js"></script>
 <script type="text/javascript" src="js/controller/TodoListCtrl.js"></script>
 
-<div class="col-lg-12" ng-controller="TodoListCtrl">
+<div class="col-lg-12" ng-controller="TodoListCtrl" ng-init="init()">
     <div class="row">
         <div class="col-lg-6">
             <h1>Todo:</h1>
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <div ng-cloak class="modal fade" id="submit" tabindex="-1" role="dialog">
+    <div ng-cloak class="modal fade" id="saveAndRetrieve" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -108,7 +108,8 @@
                     <input class="form-control" ng-model="data.email" type="email" id="email" required/>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="save()">Submit</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="save()">Save</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="retrieve()">Retrieve</button>
                 </div>
             </div>
         </div>

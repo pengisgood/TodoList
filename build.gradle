@@ -17,5 +17,7 @@ repositories {
 dependencies {
     compile 'javax.servlet:servlet-api:2.5'
 	compile 'org.springframework:spring-webmvc:4.0.0.RELEASE'
+    compile 'com.google.guava:guava:15.0'
+    compile 'com.google.code.gson:gson:2.2.4'
 }
 

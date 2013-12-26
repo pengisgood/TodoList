@@ -1,7 +1,7 @@
-var myApp = angular.module('myApp', ['myApp.services', 'myApp.mongolabService']);
+var myApp = angular.module('myApp', ['myApp.services']);
 
-myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService', function($scope, todoListService, mongolabService) {
-    $scope.data = new mongolabService();
+myApp.controller('TodoListCtrl', ['$scope', 'todoListService', function($scope, todoListService) {
+    $scope.data = {};
 
     $scope.data.email = "";
     $scope.data.confirmedEmail = "";
@@ -65,6 +65,7 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', 'mongolabService'
     };
 
     var updateTodos =function (value) {
+        console.log(value);
         $scope.data.todos = value;
     };
 

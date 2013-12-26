@@ -15,7 +15,7 @@ myApp.service('todoListService', ['$http', function ($http) {
 
     this.find = function (key, onSuccess) {
         console.log("finding by " + key);
-        $http.get('/retrieve', key)
+        $http.get('/retrieve/' + key)
             .success(function (data) {
                 onSuccess(data);
             })

@@ -5,6 +5,8 @@
     <div class="row">
         <div class="col-lg-6">
             <h1>Todo:</h1>
+
+            {{data.todos |json}}
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover">
                     <thead>

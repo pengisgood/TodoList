@@ -4,7 +4,6 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', function($scope, 
     $scope.data = {};
 
     $scope.data.email = "";
-    $scope.data.confirmedEmail = "";
     $scope.data.todos = {};
 
     $scope.currentItem = {};
@@ -47,20 +46,18 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', function($scope, 
     };
 
     var success = function(){
-        console.log("save data succeed");
+        console.log("Succeed!!");
     };
 
     var error = function(){
-        console.log("save data failed");
+        console.log("Failed!!");
     };
 
     $scope.save = function() {
-        console.log("saving...");
         todoListService.save($scope.data, success);
     };
 
     $scope.retrieve = function() {
-        console.log("retrieving...");
         todoListService.find($scope.data.email, updateTodos);
     };
 

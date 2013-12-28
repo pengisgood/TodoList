@@ -13,18 +13,30 @@ myApp.service('todoListService', ['$http', function ($http) {
         ];
     };
 
-    this.find = function (key, onSuccess) {
-        console.log("finding by " + key);
-        $http.get('/retrieve/'+ key)
+    this.find = function (email, onSuccess) {
+        console.log("retrieving by " + email);
+        $http.get('/retrieve/' + email)
             .success(function (data) {
                 onSuccess(data.todos);
             })
             .error(function (data) {
-                console.log(data);
+                console.log("=========================");
+                console.log("retrieving data failed!");
+                console.log("=========================");
             });
     };
 
     this.save = function (data, onSuccess) {
+        console.log("saving data: " + data);
+        $http.put('/save/' + data.email, data)
+            .success(function (data) {
+                onSuccess(data);
+            })
+            .error(function (data) {
+                console.log("=========================");
+                console.log("saving data failed!");
+                console.log("=========================");
+            });
 
     };
 

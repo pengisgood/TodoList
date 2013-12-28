@@ -3,6 +3,7 @@ package org.makedream.controller;
 import org.makedream.service.MongoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,14 +27,9 @@ public class TodoListController {
         return result;
     }
 
-    @RequestMapping(value = "/save/{email:.+}/{todos}", method = RequestMethod.GET)
-    public String save(@PathVariable String email, @PathVariable String todos) {
-        String result = mongoService.find(email);
-        if (result == "") {
-            mongoService.insert(email, todos);
-        } else {
-            mongoService.update(email, todos);
-        }
+    @RequestMapping(value = "/save/{email:.+}", method = RequestMethod.PUT)
+    public String save(@PathVariable String email, @RequestBody String todos) {
+        mongoService.insertOrUpdate(email, todos);
         return "";
     }
 

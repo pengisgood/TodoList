@@ -5,8 +5,6 @@
     <div class="row">
         <div class="col-lg-6">
             <h1>Todo:</h1>
-
-            {{data.todos |json}}
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
@@ -103,7 +101,8 @@
                 <div class="modal-body">
                     <p>Please remember this email address. We have no access to get it back if you forget it! Good luck!</p>
                     <label class="control-label" for="email">Email Address</label>
-                    <input class="form-control" ng-model="data.email" type="email" id="email" required/>
+                    <input class="form-control" ng-model="data.email" type="text" id="email"/>
+                    email:{{data.email}}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="save()">Save</button>

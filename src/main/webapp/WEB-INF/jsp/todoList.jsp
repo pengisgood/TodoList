@@ -77,8 +77,11 @@
                         <label class="control-label" for="title">Title</label>
                         <input class="form-control" ng-model="currentItem.text" type="text" id="title" placeholder="enter your text here..."/>
                         <br>
-                        <label class="control-label" for="status">Done</label>
-                        <input class="form-control" type="text" id="status" ng-model="currentItem.done">
+                        <label class="control-label" for="status">Done Status</label>
+                        <form id="status">
+                            <input type="radio" ng-model="currentItem.done" ng-value="true"/>True <br/>
+                            <input type="radio" ng-model="currentItem.done" ng-value="false"/>False <br/>
+                        </form>
                         <br>
                         <label class="control-label" for="lastUpdate">Last update</label>
                         <input class="form-control" disabled type="text" id="lastUpdate" ng-model="currentItem.lastUpdated">

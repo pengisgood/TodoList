@@ -14,7 +14,7 @@ myApp.controller('TodoListCtrl', ['$scope', 'todoListService', function($scope, 
     };
 
     $scope.add = function () {
-        $scope.originItem = {};
+        $scope.originItem = {done:false};
         $scope.currentItem = {done:false, lastUpdated: Date.now()};
     };
 
